@@ -1,0 +1,21 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Levels/TestingMap.umap",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/MyFolder/TestingGameMode.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Blueprints/Player.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/TestMappingContext.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/LeftAndRightMovement.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/BackAndForwardMovement.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/MouseMovement.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/Jump.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Blueprints/Bullet.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/Shoot.uasset"
+			]
+		}
+	]
+}

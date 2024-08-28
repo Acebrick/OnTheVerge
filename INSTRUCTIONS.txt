@@ -1,0 +1,32 @@
+INSTRUCTIONS
+
+A quick and easy debug is to call "Print String" to see if what you are trying to call is even getting called or not
+
+BULLET
+Inside the bullet component (not the actor, the physical object of the bullet/the sphere): 
+- Tick "Simulation Generates Hit Events" under collision to enable hit collisions
+- Tick "Use CCD" under Collision > Advanced which is continuous collision detection, hit detections can fail without this with faster moving actors at the cost of performance
+- These two settings only need to be applied to the object you wish to call the hit event, not the objects being hit
+- Right-click on the bullet component > Add Component > OnComponentHit // This is the event that is called when the component hits another object that has physics enabled
+- Inside this event, first call "Apply Damage", give the damage a value, tell the AnyDamage event that the damaged actor is the other actor from the OnComponentHit event
+- Then to destroy the bullet, simply call "Destroy Actor"
+- Updated the translate bullet function, the forward vector needed to be that of the bulletSpawnPos not the player (this allows you to shoot up and down)
+- To do this, go "Get Player Pawn" > "Cast To Player" > "Get Bullet Spawn Pos" and the connect that bulletSpawnPos to the target of the get forward vector
+- The Cast To Player is what allows access to the player script, the get player pawn only gives limited access such as it's transform
+- Get Player Pawn always returns the object we have assigned as player pawn in our custom game mode, meaning we can always pass in that object to the Cast To event
+- Added a life timer that's used to destroy the bullet after x seconds, pretty sure you know how to do that
+
+
+ENEMY
+- Using the logic from the bullet to access the player, you can make the player into a variable for easier access, you can do this by either manually creating a 
+  player variable like you would any other variable, you then need to set that variable from Cast To Player, or you can also right click on "As Player" in "Cast To Player",
+  then click "Promote to Variable", does the same thing it will just automatically set the variable for you, obviously do this in event begin play
+- To make the enemy look at you, get the world location of the enemy and the player, then connect these values to an event called "Find Look at Rotation", you can then use
+  the returned rotation to pass into the event "Set Actor Rotation"
+- To make the enemy look always look at you, put it inside the event called "Event Tick", pretty sure you know what that does
+- To make the enemy take damage, we can call "Event AnyDamage", which triggers whenever another object uses the Apply Damage event on it
+- Make a health variable, then subtract it by the damage amount from the AnyDamage event
+- Then with the health (can be the same node, a new one, or the return from set health), check if it's <= 0, connect to a branch (if), then destroy actor 
+- To make the enemy flash, make a base and hit material (right-click in a new Materials folder, Material)
+- Then from the branch in AnyDamage, if false (not dead), call "Set Material", you can attach more than one components to the target if you have more than one like I did
+- Then delay however long you want before setting the material back to the original colour

@@ -14,7 +14,11 @@
 				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/MouseMovement.uasset",
 				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/Jump.uasset",
 				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Blueprints/Bullet.uasset",
-				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/Shoot.uasset"
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Inputs/Shoot.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Blueprints/Enemy.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Materials/matEnemy.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Materials/matEnemyGun.uasset",
+				"C:/Users/Josh/Documents/Unreal Projects/OnTheVerge/Content/Materials/matEnemyHit.uasset"
 			]
 		}
 	]
